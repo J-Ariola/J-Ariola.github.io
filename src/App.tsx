@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,26 +8,23 @@ function App() {
 
   return (
     <>
+      <header>My Portfolio Website</header>
+      <nav>
+        <button onClick={() => console.log("Nav button 1")}>Nav 1</button>
+        <button onClick={() => console.log("Nav button 2")}>Nav 2</button>
+        <button onClick={() => console.log("Nav button 3")}>Nav 3</button>
+      </nav>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>This is my Portfolio. Feel free to check out any of my projects</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <footer>
+        Contact Me
+      </footer>
     </>
   )
 }
