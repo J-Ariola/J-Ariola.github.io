@@ -4,6 +4,7 @@ import { useState } from 'react'
 import './App.css'
 import { useTranslation } from "react-i18next";
 import i18n from './i18n';
+import { Button } from './components/ui/button';
 
 type Language = {
   nativeName: string,
@@ -29,22 +30,22 @@ function App() {
         {t("header")}
       </header>
       <nav>
-        <button onClick={() => console.log("Nav button 1")}>Nav 1</button>
-        <button onClick={() => console.log("Nav button 2")}>Nav 2</button>
-        <button onClick={() => console.log("Nav button 3")}>Nav 3</button>
+        <Button onClick={() => console.log("Nav button 1")}> Nav1 </Button>
+        <Button onClick={() => console.log("Nav button 2")}> Nav2 </Button>
+        <Button onClick={() => console.log("Nav button 3")}> Nav3 </Button>
       </nav>
       <div>
         {Object.keys(lngs).map( (lng) => (
-          <button key={lng} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+          <Button key={lng} type="submit" onClick={() => i18n.changeLanguage(lng)}>
             { lngs[lng as keyof Languages].nativeName }
-          </button>
+          </Button>
         ))}
       </div>
       <h1>This is my Portfolio. Feel free to check out any of my projects</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
       </div>
       <footer>
         Contact Me
