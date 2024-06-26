@@ -1,6 +1,3 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import { useTranslation } from "react-i18next";
 import i18n from './i18n';
@@ -22,7 +19,6 @@ const lngs:Languages = {
 }
 
 function App() {
-  const [count, setCount] = useState(0)
   const { t } = useTranslation();
 
   return (
@@ -41,13 +37,8 @@ function App() {
         ))}
       </div>
       <h2>{t("introduction.part1")}</h2>
-      <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-      </div>
       <footer>
-        Contact Me
+        {"Contact Me"}
       </footer>
     </>
   )
