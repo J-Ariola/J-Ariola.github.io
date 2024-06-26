@@ -10,6 +10,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 
 export default function Navigation() {
@@ -42,6 +43,9 @@ export default function Navigation() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+      </NavigationMenuList>
+      <NavigationMenuList>
+        <LanguageSelector/>
       </NavigationMenuList>
     </NavigationMenu>
   )
