@@ -1,3 +1,16 @@
 {
-  "header": "My Portfolio Website"
+  "header": "My Portfolio Website",
+  "navigation_menu": {
+    "about_me": "About Me",
+    "projects": "Projects"
+  },
+  "introduction": {
+    "part1":"Hello, my name is Jarrod Ariola. Welcome to my website. Feel free to checkout any of my projects."
+  },
+  "project_titles": {
+    "Neon_Skyline": "Neon Skyline",
+    "PoiPoi": "PoiPoi",
+    "Bug_Off": "Bug-Off",
+    "My_Video_Game_Collection": "My Video Game Collection"
+  }
 }

@@ -1,3 +1,16 @@
 {
-  "header": "作品集"
+  "header": "作品集",
+  "navigation_menu": {
+    "about_me": "僕について",
+    "projects": "プロジェクト"
+  },
+  "introduction": {
+    "part1":"はじめまして、アリオーラ・ジェラードです。僕の作品集サイトへようこそ！プロジェクトを鑑賞していただきありがとうございます。"
+  },
+  "project_titles": {
+    "Neon_Skyline": "ネオンス・カイライン",
+    "PoiPoi": "ポイポイ",
+    "Bug_Off": "バッグ・オフ",
+    "My_Video_Game_Collection": "マイ・ゲーム・コレクション"
+  }
 }
