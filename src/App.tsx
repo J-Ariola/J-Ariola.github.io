@@ -12,15 +12,15 @@ function App() {
       </header>
       <Navigation/>
       <h2>{t("introduction.part_1")}</h2>
-      <section>
+      <article>
         <h2 className="text-3xl font-sans">{t("navigation_menu.about_me")}</h2>
         <p>{t("about_me.part_1")}</p>
         <p>{t("about_me.part_2")}</p>
         <p>{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
-      </section>
-      <section>
+      </article>
+      <article>
         <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
-      </section>
+      </article>
       <footer>
         {"Contact Me"}
       </footer>
