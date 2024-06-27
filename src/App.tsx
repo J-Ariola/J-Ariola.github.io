@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Navigation from './components/react/Navigation';
-
+import ProjectCarousel from "./components/react/ProjectCarousel";
 
 function App() {
   const { t } = useTranslation();
@@ -19,7 +19,11 @@ function App() {
         <p>{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
       </article>
       <article>
-        <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
+        <section>
+          <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
+          <ProjectCarousel/>
+        </section>
+        
       </article>
       <footer>
         {"Contact Me"}
