@@ -8,11 +8,12 @@
     "email": "jarrod.ariola@gmail.com"
   },
   "introduction": {
-    "part1":"Hello, my name is Jarrod Ariola. I am a full-stack Software Engineer and a Game Developer. Welcome to my website. Feel free to checkout any of my projects."
+    "part_1":"Hello, my name is Jarrod Ariola. I am a full-stack Software Engineer and a Game Developer. Welcome to my website. Feel free to checkout any of my projects."
   },
   "about_me": {
-    "main":"I am a developer from the Atlanta, Georgia in the US. My journey began with a fascination for programming during high school, leading me to major in Video Game Development in university. Entralled by Japanese games, I set my sights on becoming a video game programmer in Japan. My first job in Japan was an English teacher under the JET Programme. During this 5 year period, I took the opportunity to learn more about the culture and the language of Japan. That didn't stop me from programming though. I continued to refine my skills as a programmer by studying new languages such as C++ and Javascript/Typescript and applying that knowledge to the projects you will see on this website. Learning Javascript has led me into the world of software engineering and I am excited to learn more and apply my skills to this ever-evolving field.",
-    "closing": "Thank you again for taking the time to checkout my portfolio. If you wish to contact me, don't hesitate to message me on LinkedIn or my email:" 
+    "part_1":"I am a software engineer from Atlanta, Georgia in the US. My hobbies are listening to music, playing the drums, playing video games, and bouldering. My journey began with a fascination for programming during high school where I first learned Java. The satisfying feeling to solve problems through coding and to integrate it with my passion for video games led me to major in Video Game Development in university.",
+    "part_2":"Enthralled by Japanese games, I set my sights on becoming a videogame programmer in Japan. My first job in Japan was as an English teacher under the JET Programme. During this 5 year period, I took the opportunity to learn more about the culture and the language of Japan. That didn't stop me from programming though! I continued to refine my skills as a programmer by studying new programming languages such as C++ and Javascript/Typescript and applying that knowledge to the projects you will see on this website. Learning Javascript has led me into the world of software engineering and I am excited to learn more and apply my skills to this ever-evolving field.",
+    "closing": "Thank you again for taking the time to check out my portfolio. If you wish to contact me, don't hesitate to message me on LinkedIn or my email:" 
   },
   "project_titles": {
     "PoiPoi": "PoiPoi",
