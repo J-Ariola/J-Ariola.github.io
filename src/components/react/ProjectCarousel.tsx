@@ -1,3 +1,4 @@
+import { Project } from "@/@types/global"
 import {
   Carousel,
   CarouselContent,
@@ -5,14 +6,21 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { useTranslation } from "react-i18next"
 
-export default function ProjectCarousel() {
+interface Props {
+  projects: Project[]
+}
+
+export default function ProjectCarousel({projects}: Props) {
+  const { t } = useTranslation();
+
   return (
     <Carousel className="w-full max-w-xs">
       <CarouselContent>
-        {Array.from({ length: 4}).map((_, index) => (
+        {projects.map((project, index) => (
           <CarouselItem key={index}>
-            <div> {index} </div>
+            <div> {t(`project_titles.${project.titleKey}`)} </div>
           </CarouselItem>
         ))}
       </CarouselContent>
