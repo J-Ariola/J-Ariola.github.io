@@ -48,7 +48,7 @@ function App() {
           <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
           <ProjectCarousel projects={projects}/>
         </section>
-        
+        {/* TODO: Each section of the project will be inserted here */}
       </article>
       <footer>
         {"Contact Me"}
