@@ -13,12 +13,7 @@ function App() {
     handleInitializeProjects();
   }, [])
 
-  useEffect(() => {
-    console.table(projects);
-  }, [projects])
-
   function handleInitializeProjects() {
-    console.log("Initialize project keys");
     const titleKeys = Object.keys(projectTitleKeys).map( title => {
       return ({titleKey: title} as Project) 
     });
