@@ -20,7 +20,10 @@ export default function ProjectCarousel({projects}: Props) {
       <CarouselContent>
         {projects.map((project, index) => (
           <CarouselItem key={index}>
-            <div> {t(`project_titles.${project.titleKey}`)} </div>
+            <a href="/">
+              <div> {t(`project_titles.${project.titleKey}`)} </div>
+              {project.imgUrl ? <img src={`public/img/${project.imgUrl}`} alt={`Image of project ${project.titleKey}`}/> : <></>}
+            </a>
           </CarouselItem>
         ))}
       </CarouselContent>

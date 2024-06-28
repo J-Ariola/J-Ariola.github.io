@@ -4,6 +4,12 @@ import Navigation from './components/react/Navigation';
 import ProjectCarousel from "./components/react/ProjectCarousel";
 import { Project } from "@/@types/global";
 
+const projectNameImgFileNameLookUp = {
+  "PoiPoi": "Poipoi.png",
+  "Bug_Off": "bug-off-logo.png",
+  "Neon_Skyline": "neon-skyline-logo-crop.png",
+}
+
 function App() {
   const { t } = useTranslation();
   const projectTitleKeys = t("project_titles", {returnObjects: true});
@@ -15,7 +21,11 @@ function App() {
 
   function handleInitializeProjects() {
     const titleKeys = Object.keys(projectTitleKeys).map( title => {
-      return ({titleKey: title} as Project) 
+      const project:Project = {
+        titleKey: title,
+        imgUrl: projectNameImgFileNameLookUp[title as keyof {"PoiPoi": string, "Bug_Off": string, "Neon_Skyline": string}],
+      }
+      return project;
     });
     setProjects(titleKeys);
   }
