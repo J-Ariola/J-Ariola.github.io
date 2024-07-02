@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 import Navigation from './components/react/Navigation';
 import ProjectCarousel from "./components/react/ProjectCarousel";
 import { Project } from "@/@types/global";
+import NextJSLogo from "../public/img/badge/node-js.logo.svg";
 
 const projectNameImgFileNameLookUp = {
-  "PoiPoi": "Poipoi.png",
+  "PoiPoi": "poipoi.png",
   "Bug_Off": "bug-off-logo.png",
   "Neon_Skyline": "neon-skyline-logo-crop.png",
 }
@@ -49,6 +50,17 @@ function App() {
           <ProjectCarousel projects={projects}/>
         </section>
         {/* TODO: Each section of the project will be inserted here */}
+        <section>
+          <div className="flex bg-purple-950/50 rounded-lg ">
+            <div className="">
+              <h2 className="text-3xl">{"Project Name"}</h2>
+              <p>{"Description of the App"}</p>
+              <div className="grid-rows-2">
+                <img src={NextJSLogo} alt="Next JS Logo" ></img>
+              </div>
+            </div>
+          </div>
+        </section>
       </article>
       <footer>
         {"Contact Me"}
