@@ -10,11 +10,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "./LanguageSelector";
 import { Project } from "@/@types/global";
 
 interface Props {
   projects: Project[]
+  className?: string
 }
 
 export default function Navigation({ projects } : Props) {
@@ -24,12 +24,14 @@ export default function Navigation({ projects } : Props) {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={navigationMenuTriggerStyle() + " min-w-24"}>
             {t("navigation_menu.about_me")}
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{t("navigation_menu.projects")}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="min-w-28">
+            {t("navigation_menu.projects")}
+            </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 grid-cols-1 ">
               {projects.map( (project) => (
@@ -48,7 +50,7 @@ export default function Navigation({ projects } : Props) {
         </NavigationMenuItem>
       </NavigationMenuList>
       <NavigationMenuList>
-        <LanguageSelector/>
+        
       </NavigationMenuList>
     </NavigationMenu>
   )
