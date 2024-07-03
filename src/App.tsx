@@ -75,8 +75,8 @@ function App() {
         </section>
         {/* TODO: Each section of the project will be inserted here */}
         <section className="">
-          <div className="bg-fuchsia-950/60 rounded-lg w-full p-4">
-              <div className="flex justify-center">
+          <div className="bg-fuchsia-950/60 rounded-lg w-full flex flex-col px-8">
+              <div className="flex justify-center p-4">
                 <h2 className="text-4xl pr-6">{"Project Name"}</h2>
                 <div className="w-0 overflow-visible">
                   <Button asChild className="max-w-max" variant="outline" size="icon" onClick={() => alert("External Link Clicked")}>
@@ -84,10 +84,17 @@ function App() {
                   </Button>
                 </div>
               </div>
-              <div className="grid grid-cols-2 auto-rows-max gap-2">
-                <p className="col-span-1 text-xl pl-2 ">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor scelerisque orci ac placerat. Aliquam id dolor sodales, ultrices ligula et, mollis erat. Fusce commodo fringilla mi varius euismod. Aliquam ex erat, molestie at fringilla sit amet, congue ac ipsum. Sed tincidunt quis mi a maximus. Donec rhoncus rutrum nunc sed mollis. Sed in tempor enim. Vestibulum id purus mauris. Fusce non euismod lectus. Etiam finibus sodales purus ac facilisis. Mauris imperdiet ultrices nunc, vitae egestas nunc bibendum ac. Duis sollicitudin placerat dignissim. Morbi blandit consectetur dui, id auctor urna dictum ac. In quam dui, commodo sit amet accumsan a, commodo quis neque."}</p>
-                {/* <img className="col-span-1 col-start-3 row-span-2 self-center" src="/img/poipoi.png" alt="Image of PoiPoi"/> */}
-                {/* <div className="col-span-1 col-start-2 row-span-2 self-center justify-self-center">
+              <div className="flex flex-col items-center">
+                <p className="pb-4">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor scelerisque orci ac placerat. Aliquam id dolor sodales, ultrices ligula et, mollis erat. Fusce commodo fringilla mi varius euismod. Aliquam ex erat, molestie at fringilla sit amet, congue ac ipsum. Sed tincidunt quis mi a maximus. Donec rhoncus rutrum nunc sed mollis. Sed in tempor enim. Vestibulum id purus mauris. Fusce non euismod lectus. Etiam finibus sodales purus ac facilisis. Mauris imperdiet ultrices nunc, vitae egestas nunc bibendum ac. Duis sollicitudin placerat dignissim. Morbi blandit consectetur dui, id auctor urna dictum ac. In quam dui, commodo sit amet accumsan a, commodo quis neque."}</p>
+                <div className="grid grid-flow-col auto-col-max gap-2">
+                  <img src={NextJSLogo} alt="Next JS Logo" />
+                  <img src={NodeJSLogo} alt="Node JS Logo" />
+                  <img src={ProtoMapsLogo} alt="Protomaps Logo" />
+                  <img src={PrismaLogo} alt="Prisma Logo" />
+                  <img src={FirebaseLogo} alt="Firebase Logo" />
+                  <img src={JestLogo} alt="Jest Logo" />
+                </div>
+                <div className="">
                     <iframe  
                       src="https://www.youtube.com/embed/u0t2sgT7C98" 
                       title="Neon Skyline (senior project)" 
@@ -95,15 +102,8 @@ function App() {
                       referrerPolicy="strict-origin-when-cross-origin" 
                       allowFullScreen>
                     </iframe>
-                </div> */}
-                <div className="col-start-1 col-span-1 flex flex-wrap w-auto object-contain md:object-scale-down">
-                  <img className="w-2/12" src={NodeJSLogo} alt="Node JS Logo" ></img>
-                  <img className="w-2/12" src={PrismaLogo} alt="Prisma Logo" ></img>
-                  <img className="w-2/12" src={NextJSLogo} alt="Next JS Logo" ></img>
-                  <img className="w-2/12" src={FirebaseLogo} alt="Firebase Logo" ></img>
-                  <img className="w-2/12" src={JestLogo} alt="Jest Logo" ></img>
-                  <img className="w-2/12" src={ProtoMapsLogo} alt="Protomaps Logo" ></img>
                 </div>
+                {/* <img className="col-span-1 col-start-3 row-span-2 self-center" src="/img/poipoi.png" alt="Image of PoiPoi"/> */}
               </div>
           </div>
         </section>
