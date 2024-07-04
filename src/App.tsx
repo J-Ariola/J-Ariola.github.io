@@ -3,17 +3,15 @@ import { useTranslation } from "react-i18next";
 import Navigation from './components/react/Navigation';
 import ProjectCarousel from "./components/react/ProjectCarousel";
 import { IconDetails, Project } from "@/@types/global";
-// import { Button } from "./components/ui/button";
-import Icon from "./components/react/Icon"; 
 import LanguageSelector from "@/components/react/LanguageSelector";
+import ProjectDetails from "./components/react/ProjectDetails";
 import NextJSLogo from "../public/img/badges/next-js.logo.svg";
 import NodeJSLogo from "../public/img/badges/node-js.logo.svg";
 import PrismaLogo from "../public/img/badges/prisma.logo.svg";
 import FirebaseLogo from "../public/img/badges/firebase.logo.svg";
 import JestLogo from "../public/img/badges/jest.logo.svg";
 import ProtoMapsLogo from "../public/img/badges/protomaps.logo.svg";
-// import ExternalLinkIcon from "../public/img/icons/external-link.icon.svg";
-import ProjectDetails from "./components/react/ProjectDetails";
+import UnityLogo from "../public/img/badges/unity.logo.svg";
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": "poipoi.png",
@@ -69,14 +67,14 @@ function App() {
         <p>{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
       </article>
       <article>
-        <section className="flex flex-col items-center border-4 border-green-500 py-2">
+        <section className="flex flex-col items-center border-4 border-green-500">
           <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
           <ProjectCarousel 
           className="w-full max-w-xs"
           projects={projects}/>
         </section>
         {/* TODO: Each section of the project will be inserted here */}
-        <section>
+        <section className="pt-4 py-16">
           <ProjectDetails
             projectTitle={t("project_titles.PoiPoi")}
             projectDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor scelerisque orci ac placerat. Aliquam id dolor sodales, ultrices ligula et, mollis erat. Fusce commodo fringilla mi varius euismod. Aliquam ex erat, molestie at fringilla sit amet, congue ac ipsum. Sed tincidunt quis mi a maximus. Donec rhoncus rutrum nunc sed mollis. Sed in tempor enim. Vestibulum id purus mauris. Fusce non euismod lectus. Etiam finibus sodales purus ac facilisis. Mauris imperdiet ultrices nunc, vitae egestas nunc bibendum ac. Duis sollicitudin placerat dignissim. Morbi blandit consectetur dui, id auctor urna dictum ac. In quam dui, commodo sit amet accumsan a, commodo quis neque."
@@ -109,13 +107,24 @@ function App() {
               ] as Array<IconDetails>}
             secondary={<iframe  
               src="https://www.youtube.com/embed/u0t2sgT7C98" 
-              className="py-4 w-max"
               title="Neon Skyline (senior project)" 
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               referrerPolicy="strict-origin-when-cross-origin" 
               allowFullScreen>
             </iframe>}
             className="bg-fuchsia-950/60"
+          />
+        </section>
+        <section className="py-16">
+          <ProjectDetails
+            className="bg-amber-800"
+            projectTitle={t("project_titles.Bug_Off")}
+            projectDescription="A simple created for a Itch.io GameJam. The user acts as a bug in a game with the goal to frustrate the hero into quitting the game."
+            techIcons={[{
+              imgSrc: UnityLogo,
+              altText: "Unity Logo"
+            }] as Array<IconDetails>}
+            secondary={<img src="/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
           />
         </section>
       </article>

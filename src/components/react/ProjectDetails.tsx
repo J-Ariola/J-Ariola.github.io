@@ -33,9 +33,9 @@ export default function ProjectDetails({
           </Button>
         </div>
       </div>
-      <div className="flex flex-col items-center">
-        <p className="pb-4">{projectDescription}</p>
-        <div className="flex justify-center gap-1 p-2">
+      <div className="flex flex-col items-center gap-y-8">
+        <p className="">{projectDescription}</p>
+        <div className="flex justify-center gap-1">
           {techIcons ? 
             techIcons.map( (icon) => {
               return <Icon
@@ -45,9 +45,11 @@ export default function ProjectDetails({
             <></>
           }
         </div>
-        {secondary ? 
-          secondary : 
-          <></>}
+        <div className="pb-4">
+          {secondary ? 
+            secondary : 
+            <></>}
+        </div>
       </div>
           </div>
   );
