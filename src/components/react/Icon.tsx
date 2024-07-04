@@ -1,15 +1,14 @@
+import { IconDetails } from "@/@types/global"
 interface Props {
-  imgSrc: string,
-  altText: string,
+  iconDetails: IconDetails,
   className?: string,
 }
 
 export default function Icon({
-  imgSrc,
-  altText="",
+  iconDetails,
   className
 }:Props) {
-
+  const {imgSrc, altText} = iconDetails;
   return (
     <img
     src={imgSrc}
