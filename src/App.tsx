@@ -4,6 +4,7 @@ import Navigation from './components/react/Navigation';
 import ProjectCarousel from "./components/react/ProjectCarousel";
 import { Project } from "@/@types/global";
 import { Button } from "./components/ui/button";
+import Icon from "./components/react/Icon"; 
 import LanguageSelector from "@/components/react/LanguageSelector";
 import NextJSLogo from "../public/img/badges/next-js.logo.svg";
 import NodeJSLogo from "../public/img/badges/node-js.logo.svg";
@@ -29,14 +30,14 @@ function App() {
   }, [])
 
   function handleInitializeProjects() {
-    const titleKeys = Object.keys(projectTitleKeys).map( title => {
+    const projects = Object.keys(projectTitleKeys).map( title => {
       const project:Project = {
         titleKey: title,
         imgUrl: projectNameImgFileNameLookUp[title as keyof {"PoiPoi": string, "Bug_Off": string, "Neon_Skyline": string}],
       }
       return project;
     });
-    setProjects(titleKeys);
+    setProjects(projects);
   }
 
   return (
@@ -74,7 +75,7 @@ function App() {
           projects={projects}/>
         </section>
         {/* TODO: Each section of the project will be inserted here */}
-        <section className="">
+        <section>
           <div className="bg-fuchsia-950/60 rounded-lg w-full flex flex-col px-8">
               <div className="flex justify-center p-4">
                 <h2 className="text-4xl pr-6">{"Project Name"}</h2>
@@ -86,31 +87,58 @@ function App() {
               </div>
               <div className="flex flex-col items-center">
                 <p className="pb-4">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor scelerisque orci ac placerat. Aliquam id dolor sodales, ultrices ligula et, mollis erat. Fusce commodo fringilla mi varius euismod. Aliquam ex erat, molestie at fringilla sit amet, congue ac ipsum. Sed tincidunt quis mi a maximus. Donec rhoncus rutrum nunc sed mollis. Sed in tempor enim. Vestibulum id purus mauris. Fusce non euismod lectus. Etiam finibus sodales purus ac facilisis. Mauris imperdiet ultrices nunc, vitae egestas nunc bibendum ac. Duis sollicitudin placerat dignissim. Morbi blandit consectetur dui, id auctor urna dictum ac. In quam dui, commodo sit amet accumsan a, commodo quis neque."}</p>
-                <div className="grid grid-flow-col auto-col-max gap-2">
-                  <img src={NextJSLogo} alt="Next JS Logo" />
-                  <img src={NodeJSLogo} alt="Node JS Logo" />
-                  <img src={ProtoMapsLogo} alt="Protomaps Logo" />
-                  <img src={PrismaLogo} alt="Prisma Logo" />
-                  <img src={FirebaseLogo} alt="Firebase Logo" />
-                  <img src={JestLogo} alt="Jest Logo" />
+                <div className="flex justify-center gap-1 p-2">
+                  <Icon
+                  imgSrc={NextJSLogo} 
+                  className='w-14 md:w-20' 
+                  altText="Next JS Logo"
+                  />
+                  <Icon
+                  imgSrc={NodeJSLogo} 
+                  className='w-14 md:w-20' 
+                  altText="Node JS Logo"
+                  />
+                  <Icon
+                  imgSrc={ProtoMapsLogo} 
+                  className='w-14 md:w-20' 
+                  altText="Protomaps Logo"
+                  />
+                  <Icon
+                  imgSrc={PrismaLogo} 
+                  className='w-14 md:w-20' 
+                  altText="Prisma Logo"
+                  />
+                  <Icon
+                  imgSrc={FirebaseLogo} 
+                  className='w-14 md:w-20' 
+                  altText="Firebase Logo"
+                  />
+                  <Icon
+                  imgSrc={JestLogo} 
+                  className='w-14 md:w-20' 
+                  altText="Jest Logo"
+                  />
                 </div>
-                <div className="">
+                {/* <div className="py-4 px-2"> */}
                     <iframe  
                       src="https://www.youtube.com/embed/u0t2sgT7C98" 
+                      className="py-4 w-max"
                       title="Neon Skyline (senior project)" 
                       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                       referrerPolicy="strict-origin-when-cross-origin" 
                       allowFullScreen>
                     </iframe>
-                </div>
+                {/* </div> */}
                 {/* <img className="col-span-1 col-start-3 row-span-2 self-center" src="/img/poipoi.png" alt="Image of PoiPoi"/> */}
               </div>
           </div>
         </section>
       </article>
       </main>
-      <footer className="pb-4">
-        {"Contact Me"}
+      <footer className="pt-4">
+        <div className="pb-4 bg-blue-500 rounded-t-lg">
+          {"Contact Me"}
+        </div>
       </footer>
     </div>
   )
