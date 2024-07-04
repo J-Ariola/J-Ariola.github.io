@@ -12,6 +12,9 @@ import FirebaseLogo from "../public/img/badges/firebase.logo.svg";
 import JestLogo from "../public/img/badges/jest.logo.svg";
 import ProtoMapsLogo from "../public/img/badges/protomaps.logo.svg";
 import UnityLogo from "../public/img/badges/unity.logo.svg";
+import TypeScriptLogo from "../public/img/badges/typescript.logo.svg";
+import ReactLogo from "../public/img/badges/react.logo.svg";
+import PostgresqlLogo from "../public/img/badges/postgresql.logo.svg";
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": "poipoi.png",
@@ -79,6 +82,10 @@ function App() {
             projectTitle={t("project_titles.PoiPoi")}
             projectDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor scelerisque orci ac placerat. Aliquam id dolor sodales, ultrices ligula et, mollis erat. Fusce commodo fringilla mi varius euismod. Aliquam ex erat, molestie at fringilla sit amet, congue ac ipsum. Sed tincidunt quis mi a maximus. Donec rhoncus rutrum nunc sed mollis. Sed in tempor enim. Vestibulum id purus mauris. Fusce non euismod lectus. Etiam finibus sodales purus ac facilisis. Mauris imperdiet ultrices nunc, vitae egestas nunc bibendum ac. Duis sollicitudin placerat dignissim. Morbi blandit consectetur dui, id auctor urna dictum ac. In quam dui, commodo sit amet accumsan a, commodo quis neque."
             techIcons={[
+              {
+                imgSrc: TypeScriptLogo,
+                altText: "Typescript Logo"
+              },
               { 
                 imgSrc: NextJSLogo, 
                 altText: "Next JS Logo"
@@ -95,10 +102,6 @@ function App() {
               {
                 imgSrc: PrismaLogo,
                 altText: "Prisma Logo"
-              },
-              {
-                imgSrc: FirebaseLogo,
-                altText: "Firebase Logo"
               },
               {
                 imgSrc: JestLogo,
@@ -125,6 +128,35 @@ function App() {
               altText: "Unity Logo"
             }] as Array<IconDetails>}
             showcase={<img src="/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
+          />
+        </section>
+        <section>
+          <ProjectDetails
+            className="bg-gray-500 border-4 border-blue-400"
+            projectTitle={t("project_titles.My_Video_Game_Collection")}
+            techIcons={[
+              {
+                imgSrc: TypeScriptLogo,
+                altText: "Typescript Logo"
+              },
+              { 
+                imgSrc: ReactLogo, 
+                altText: "React Logo"
+              }
+              ,
+              {
+                imgSrc : NodeJSLogo,
+                altText:"Node JS Logo"
+              },
+              {
+                imgSrc: PostgresqlLogo,
+                altText: "PostgreSQL Logo"
+              },
+              {
+                imgSrc: FirebaseLogo,
+                altText: "Firebase Logo"
+              },
+              ] as Array<IconDetails>}
           />
         </section>
       </article>
