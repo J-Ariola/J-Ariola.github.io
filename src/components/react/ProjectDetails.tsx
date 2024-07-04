@@ -25,8 +25,8 @@ export default function ProjectDetails({
     <div className={cn(
       "rounded-lg w-full flex flex-col px-8",
       className)}>
-      <div className="flex justify-center p-4">
-        <h2 className="text-4xl pr-6">{projectTitle}</h2>
+      <div className="flex justify-center py-4 min-w-10">
+        <h2 className="text-3xl font-semibold lg:text-4xl text-balance text-center">{projectTitle}</h2>
         <div className="w-0 overflow-visible">
           <Button asChild className="max-w-max" variant="outline" size="icon" onClick={projectLinkOnClick}>
             <img className="w-8" src={ExternalLinkIcon} alt="Link to Project" />
