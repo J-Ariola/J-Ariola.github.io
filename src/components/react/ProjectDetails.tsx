@@ -9,7 +9,7 @@ interface Props {
   projectDescription?: string,
   projectLinkOnClick?: () => void,
   techIcons?: IconDetails[],
-  secondary?: React.ReactNode,
+  showcase?: React.ReactNode,
   className?: string,
 }
 
@@ -18,7 +18,7 @@ export default function ProjectDetails({
   projectDescription = "Description",
   projectLinkOnClick = () => alert("External Link Clicked"),
   techIcons,
-  secondary,
+  showcase: secondary,
   className
   }: Props) {
   return (

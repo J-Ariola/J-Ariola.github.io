@@ -105,7 +105,7 @@ function App() {
                 altText: "Jest Logo"  
               },
               ] as Array<IconDetails>}
-            secondary={<iframe  
+            showcase={<iframe  
               src="https://www.youtube.com/embed/u0t2sgT7C98" 
               title="Neon Skyline (senior project)" 
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -124,7 +124,7 @@ function App() {
               imgSrc: UnityLogo,
               altText: "Unity Logo"
             }] as Array<IconDetails>}
-            secondary={<img src="/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
+            showcase={<img src="/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
           />
         </section>
       </article>
