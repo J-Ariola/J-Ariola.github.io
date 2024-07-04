@@ -130,7 +130,7 @@ function App() {
             showcase={<img src="/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
           />
         </section>
-        <section>
+        <section className="py-16">
           <ProjectDetails
             className="bg-gray-500 border-4 border-blue-400"
             projectTitle={t("project_titles.My_Video_Game_Collection")}
@@ -157,6 +157,23 @@ function App() {
                 altText: "Firebase Logo"
               },
               ] as Array<IconDetails>}
+          />
+        </section>
+        <section>
+          <ProjectDetails
+          className="bg-fuchsia-950/60"
+          projectTitle={t("project_titles.Neon_Skyline")}
+          techIcons={[{
+            imgSrc: UnityLogo,
+            altText: "Unity Logo"
+          }] as Array<IconDetails>}
+          showcase={<iframe  
+            src="https://www.youtube.com/embed/u0t2sgT7C98" 
+            title="Neon Skyline (senior project)" 
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen>
+          </iframe>}
           />
         </section>
       </article>
