@@ -16,6 +16,8 @@ import UnityLogo from "@/assets/img/badges/unity.logo.svg";
 import TypeScriptLogo from "@/assets/img/badges/typescript.logo.svg";
 import ReactLogo from "@/assets/img/badges/react.logo.svg";
 import PostgresqlLogo from "@/assets/img/badges/postgresql.logo.svg";
+import LinkedInLogo from "@/assets/img/badges/linkedin.logo.svg"; 
+import GithubLogo from "@/assets/img/badges/github.logo.svg"; 
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": "poipoi.png",
@@ -35,6 +37,7 @@ function App() {
   function handleInitializeProjects() {
     const projects = Object.keys(projectTitleKeys).map( titleKey => {
       const project:Project = {
+        id: `${titleKey}`,
         titleKey: `${titleKey}.title`,
         imgUrl: projectNameImgFileNameLookUp[titleKey as keyof {"PoiPoi": string, "Bug_Off": string, "Neon_Skyline": string}],
       }
@@ -44,7 +47,7 @@ function App() {
   }
 
   return (
-    <div className="max-w-10/12 mt-0 mb-auto">
+    <div className="max-w-10/12 mt-0 mb-auto ">
       <header className="flex text-center bg-gradient-to-b from-sky-400 to-blue-500 border-4 border-green-500 w-full max-w-none sticky top-0 p-2 z-50">
         <div className="flex items-center min-w-20">
           <h1 className="text-lg lg:text-3xl font-sans">{t("header")}</h1>
@@ -78,7 +81,7 @@ function App() {
           projects={projects}/>
         </section>
         {/* TODO: Each section of the project will be inserted here */}
-        <section className="pt-4 py-16">
+        <section className="pt-4 py-8 scroll-mt-28 lg:scroll-mt-14" id="PoiPoi">
           <ProjectDetails
             projectTitle={t("projects.PoiPoi.title")}
             projectDescription={t("projects.PoiPoi.description")}
@@ -119,7 +122,7 @@ function App() {
             className="bg-fuchsia-950/60"
           />
         </section>
-        <section className="py-16">
+        <section className="py-8 scroll-mt-28 lg:scroll-mt-14" id="Bug_Off">
           <ProjectDetails
             className="bg-amber-800"
             projectTitle={t("projects.Bug_Off.title")}
@@ -128,10 +131,10 @@ function App() {
               imgSrc: UnityLogo,
               altText: "Unity Logo"
             }] as Array<IconDetails>}
-            showcase={<img src="/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
+            showcase={<img src="src/assets/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
           />
         </section>
-        <section className="py-16">
+        <section className="py-8 scroll-mt-28 lg:scroll-mt-14" id="My_Video_Game_Collection">
           <ProjectDetails
             className="bg-gray-500 border-4 border-blue-400"
             projectTitle={t("projects.My_Video_Game_Collection.title")}
@@ -161,7 +164,7 @@ function App() {
               ] as Array<IconDetails>}
           />
         </section>
-        <section>
+        <section className="py-8 scroll-mt-28 lg:scroll-mt-14" id="Neon_Skyline">
           <ProjectDetails
           className="bg-fuchsia-950/60"
           projectTitle={t("projects.Neon_Skyline.title")}
@@ -181,9 +184,23 @@ function App() {
         </section>
       </article>
       </main>
-      <footer className="pt-4">
-        <div className="pb-4 bg-blue-500 rounded-t-lg">
-          {"Contact Me"}
+      <footer className="pt-4 flex">
+        <div className="p-4 w-full bg-blue-500 rounded-t-lg flex items-center justify-around">
+          <h3 className="text-2xl">
+            {"Contact Me"}
+          </h3>
+          <div className="flex gap-2">
+            <a 
+            className="transition-all hover:scale-125" 
+            href="https://www.linkedin.com/in/jarrod-ariola-558a05243/">
+              <img className="max-w-10" src={LinkedInLogo}/>
+            </a>
+            <a 
+            className="transition-all hover:scale-125" 
+            href="https://github.com/J-Ariola">
+              <img className="max-w-10" src={GithubLogo}/>
+            </a>
+          </div>
         </div>
       </footer>
     </div>
