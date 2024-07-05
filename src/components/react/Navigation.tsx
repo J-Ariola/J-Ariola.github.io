@@ -37,7 +37,7 @@ export default function Navigation({ projects } : Props) {
               {projects.map( (project) => (
                 <li className="row-span-3" key={t(`projects.${project.titleKey}`)}>
                 <NavigationMenuLink asChild>
-                  <a href="/"
+                  <a href={`#${project.id}`}
                   className="flex select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                   >
                     {t(`projects.${project.titleKey}`)}
