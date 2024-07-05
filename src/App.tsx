@@ -22,6 +22,7 @@ import GithubLogo from "@/assets/img/badges/github.logo.svg";
 import PoiPoiLogo from "@/assets/img/poipoi.png";
 import BugOffLogo from "@/assets/img/bug-off-logo.png";
 import NeonSkylineLogo from "@/assets/img/neon-skyline-logo-crop.png";
+import BugOffShowcase from "@/assets/img/bug-off-showcase.gif"
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": PoiPoiLogo,
@@ -135,7 +136,7 @@ function App() {
               imgSrc: UnityLogo,
               altText: "Unity Logo"
             }] as Array<IconDetails>}
-            showcase={<img src="src/assets/img/bug-off-showcase.gif" alt="Gif of gameplay of Bug-Off"/>}
+            showcase={<img src={BugOffShowcase} alt="Gif of gameplay of Bug-Off"/>}
           />
         </section>
         <section className="py-8 scroll-mt-28 lg:scroll-mt-14" id="My_Video_Game_Collection">
