@@ -24,7 +24,7 @@ const projectNameImgFileNameLookUp = {
 
 function App() {
   const { t } = useTranslation();
-  const projectTitleKeys = t("project_titles", {returnObjects: true});
+  const projectTitleKeys = t("projects", {returnObjects: true});
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
@@ -32,10 +32,10 @@ function App() {
   }, [])
 
   function handleInitializeProjects() {
-    const projects = Object.keys(projectTitleKeys).map( title => {
+    const projects = Object.keys(projectTitleKeys).map( titleKey => {
       const project:Project = {
-        titleKey: title,
-        imgUrl: projectNameImgFileNameLookUp[title as keyof {"PoiPoi": string, "Bug_Off": string, "Neon_Skyline": string}],
+        titleKey: `${titleKey}.title`,
+        imgUrl: projectNameImgFileNameLookUp[titleKey as keyof {"PoiPoi": string, "Bug_Off": string, "Neon_Skyline": string}],
       }
       return project;
     });

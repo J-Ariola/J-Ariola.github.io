@@ -7,7 +7,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { useTranslation } from "react-i18next"
-import { start } from "repl";
 
 interface Props {
   projects: Project[],
@@ -30,7 +29,7 @@ export default function ProjectCarousel({projects, className}: Props) {
           key={index}
           >
             <a href="/">
-              <div> {t(`project_titles.${project.titleKey}`)} </div>
+              <div> {t(`projects.${project.titleKey}`)} </div>
               {project.imgUrl ? <img className="h-44 object-cover" src={`/img/${project.imgUrl}`} alt={`Image of project ${project.titleKey}`}/> : <></>}
             </a>
           </CarouselItem>

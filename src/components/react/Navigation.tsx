@@ -35,12 +35,12 @@ export default function Navigation({ projects } : Props) {
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 grid-cols-1 ">
               {projects.map( (project) => (
-                <li className="row-span-3" key={t(`project_titles.${project.titleKey}`)}>
+                <li className="row-span-3" key={t(`projects.${project.titleKey}`)}>
                 <NavigationMenuLink asChild>
                   <a href="/"
                   className="flex select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                   >
-                    {t(`project_titles.${project.titleKey}`)}
+                    {t(`projects.${project.titleKey}`)}
                   </a>
                 </NavigationMenuLink>
               </li>
