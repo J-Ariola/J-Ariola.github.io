@@ -25,7 +25,9 @@ export default function Navigation({ projects } : Props) {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle() + " min-w-24"}>
-            {t("navigation_menu.about_me")}
+            <a href="#about-me">
+              {t("navigation_menu.about_me")}
+            </a>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

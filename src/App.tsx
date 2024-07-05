@@ -48,9 +48,9 @@ function App() {
 
   return (
     <div className="max-w-10/12 mt-0 mb-auto ">
-      <header className="flex text-center bg-gradient-to-b from-sky-400 to-blue-500 border-4 border-green-500 w-full max-w-none sticky top-0 p-2 z-50">
-        <div className="flex items-center min-w-20">
-          <h1 className="text-lg lg:text-3xl font-sans">{t("header")}</h1>
+      <header className="flex text-center bg-gradient-to-b from-sky-400 to-blue-500 w-full max-w-none sticky top-0 p-2 z-50">
+        <div className="flex items-center min-w-20 justify-center">
+          <h1 className="px-4 font-semibold text-lg lg:text-3xl font-sans">{t("header")}</h1>
         </div>
         <Navigation 
           projects={projects}/>
@@ -65,7 +65,7 @@ function App() {
         className="w-1/2 md:max-w-[33%] aspect-square rounded-full object-cover"/>
         <h2>{t("introduction.part_1")}</h2>
       </article>
-      <article className="py-2">
+      <article className="py-2 scroll-mt-28 lg:scroll-mt-14" id="about-me">
         <h2 className="text-3xl font-sans">{t("navigation_menu.about_me")}</h2>
         <p>{t("about_me.part_1")}</p>
         <br></br>
@@ -74,7 +74,7 @@ function App() {
         <p>{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
       </article>
       <article>
-        <section className="flex flex-col items-center border-4 border-green-500">
+        <section className="flex flex-col items-center border-2 border-slate-500 rounded">
           <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
           <ProjectCarousel 
           className="w-full max-w-xs"
