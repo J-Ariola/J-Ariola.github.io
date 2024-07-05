@@ -79,8 +79,8 @@ function App() {
         {/* TODO: Each section of the project will be inserted here */}
         <section className="pt-4 py-16">
           <ProjectDetails
-            projectTitle={t("project_titles.PoiPoi")}
-            projectDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor scelerisque orci ac placerat. Aliquam id dolor sodales, ultrices ligula et, mollis erat. Fusce commodo fringilla mi varius euismod. Aliquam ex erat, molestie at fringilla sit amet, congue ac ipsum. Sed tincidunt quis mi a maximus. Donec rhoncus rutrum nunc sed mollis. Sed in tempor enim. Vestibulum id purus mauris. Fusce non euismod lectus. Etiam finibus sodales purus ac facilisis. Mauris imperdiet ultrices nunc, vitae egestas nunc bibendum ac. Duis sollicitudin placerat dignissim. Morbi blandit consectetur dui, id auctor urna dictum ac. In quam dui, commodo sit amet accumsan a, commodo quis neque."
+            projectTitle={t("projects.PoiPoi.title")}
+            projectDescription={t("projects.PoiPoi.description")}
             techIcons={[
               {
                 imgSrc: TypeScriptLogo,
@@ -121,8 +121,8 @@ function App() {
         <section className="py-16">
           <ProjectDetails
             className="bg-amber-800"
-            projectTitle={t("project_titles.Bug_Off")}
-            projectDescription="A simple created for a Itch.io GameJam. The user acts as a bug in a game with the goal to frustrate the hero into quitting the game."
+            projectTitle={t("projects.Bug_Off.title")}
+            projectDescription={t("projects.Bug_Off.description")}
             techIcons={[{
               imgSrc: UnityLogo,
               altText: "Unity Logo"
@@ -133,7 +133,8 @@ function App() {
         <section className="py-16">
           <ProjectDetails
             className="bg-gray-500 border-4 border-blue-400"
-            projectTitle={t("project_titles.My_Video_Game_Collection")}
+            projectTitle={t("projects.My_Video_Game_Collection.title")}
+            projectDescription={t("projects.My_Video_Game_Collection.description")}
             techIcons={[
               {
                 imgSrc: TypeScriptLogo,
@@ -162,7 +163,8 @@ function App() {
         <section>
           <ProjectDetails
           className="bg-fuchsia-950/60"
-          projectTitle={t("project_titles.Neon_Skyline")}
+          projectTitle={t("projects.Neon_Skyline.title")}
+          projectDescription={t("projects.Neon_Skyline.description")}
           techIcons={[{
             imgSrc: UnityLogo,
             altText: "Unity Logo"

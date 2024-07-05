@@ -17,5 +17,23 @@
     "Bug_Off": "バッグ・オフ",
     "My_Video_Game_Collection": "マイ・ゲーム・コレクション",
     "Neon_Skyline": "ネオンス・カイライン"
+  },
+  "projects": {
+    "PoiPoi": {
+      "title": "ポイポイ",
+      "description": "翻訳中"
+    },
+    "Bug_Off": {
+      "title": "バッグ・オフ",
+      "description": "翻訳中"      
+    },
+    "My_Video_Game_Collection": {
+      "title": "マイ・ゲーム・コレクション",
+      "description": "翻訳中"
+    },
+    "Neon_Skyline": {
+      "title": "ネオンス・カイライン",
+      "description": "翻訳中"
+    }
   }
 }
