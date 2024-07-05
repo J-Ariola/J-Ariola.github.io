@@ -19,10 +19,14 @@ import PostgresqlLogo from "@/assets/img/badges/postgresql.logo.svg";
 import LinkedInLogo from "@/assets/img/badges/linkedin.logo.svg"; 
 import GithubLogo from "@/assets/img/badges/github.logo.svg"; 
 
+import PoiPoiLogo from "@/assets/img/poipoi.png";
+import BugOffLogo from "@/assets/img/bug-off-logo.png";
+import NeonSkylineLogo from "@/assets/img/neon-skyline-logo-crop.png";
+
 const projectNameImgFileNameLookUp = {
-  "PoiPoi": "poipoi.png",
-  "Bug_Off": "bug-off-logo.png",
-  "Neon_Skyline": "neon-skyline-logo-crop.png",
+  "PoiPoi": PoiPoiLogo,
+  "Bug_Off": BugOffLogo,
+  "Neon_Skyline": NeonSkylineLogo,
 }
 
 function App() {
