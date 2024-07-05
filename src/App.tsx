@@ -5,16 +5,17 @@ import ProjectCarousel from "./components/react/ProjectCarousel";
 import { IconDetails, Project } from "@/@types/global";
 import LanguageSelector from "@/components/react/LanguageSelector";
 import ProjectDetails from "./components/react/ProjectDetails";
-import NextJSLogo from "../public/img/badges/next-js.logo.svg";
-import NodeJSLogo from "../public/img/badges/node-js.logo.svg";
-import PrismaLogo from "../public/img/badges/prisma.logo.svg";
-import FirebaseLogo from "../public/img/badges/firebase.logo.svg";
-import JestLogo from "../public/img/badges/jest.logo.svg";
-import ProtoMapsLogo from "../public/img/badges/protomaps.logo.svg";
-import UnityLogo from "../public/img/badges/unity.logo.svg";
-import TypeScriptLogo from "../public/img/badges/typescript.logo.svg";
-import ReactLogo from "../public/img/badges/react.logo.svg";
-import PostgresqlLogo from "../public/img/badges/postgresql.logo.svg";
+import ProfilePicture from "@/assets/img/profile-picture.jpg"
+import NextJSLogo from "@/assets/img/badges/next-js.logo.svg";
+import NodeJSLogo from "@/assets/img/badges/node-js.logo.svg";
+import PrismaLogo from "@/assets/img/badges/prisma.logo.svg";
+import FirebaseLogo from "@/assets/img/badges/firebase.logo.svg";
+import JestLogo from "@/assets/img/badges/jest.logo.svg";
+import ProtoMapsLogo from "@/assets/img/badges/protomaps.logo.svg";
+import UnityLogo from "@/assets/img/badges/unity.logo.svg";
+import TypeScriptLogo from "@/assets/img/badges/typescript.logo.svg";
+import ReactLogo from "@/assets/img/badges/react.logo.svg";
+import PostgresqlLogo from "@/assets/img/badges/postgresql.logo.svg";
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": "poipoi.png",
@@ -56,7 +57,7 @@ function App() {
       <main className="px-4 pt-8 lg:px-36">
       <article className="flex flex-col items-center py-2">
         <img 
-        src="/img/profile-picture.jpg"
+        src={ProfilePicture}
         alt="Profile Picture"
         className="w-1/2 md:max-w-[33%] aspect-square rounded-full object-cover"/>
         <h2>{t("introduction.part_1")}</h2>

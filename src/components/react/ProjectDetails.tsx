@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import ExternalLinkIcon from "@/../public/img/icons/external-link.icon.svg";
+import ExternalLinkIcon from "@/assets/img/icons/external-link.icon.svg";
 import { cn } from "@/lib/utils";
 import { IconDetails } from "@/@types/global";
 import Icon from "./Icon";
