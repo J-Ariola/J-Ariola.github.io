@@ -18,11 +18,11 @@
   "projects": {
     "PoiPoi": {
       "title": "PoiPoi",
-      "description": "A mobile-first web game that challenge players to identify locations within Tokyo using visual cues from carefully curated images"
+      "description": "A mobile-first web game that challenge players to identify locations within Tokyo using visual cues from carefully curated images."
     },
     "Bug_Off": {
       "title": "Bug-Off",
-      "description": "A simple game created for an Itch.io GameJam. The user acts as a bug in a game with the goal to frustrate the hero into quitting the game."      
+      "description": "A simple game created for an Itch.io GameJam. The user acts as a bug in a game with the goal to frustrate the hero into quitting the game."
     },
     "My_Video_Game_Collection": {
       "title": "My Video Game Collection",
@@ -30,7 +30,7 @@
     },
     "Neon_Skyline": {
       "title": "Neon Skyline",
-      "description": "A hover car racing game featuring a story mode following the ex-racer Adam Reeds and an arcade mode where users can drive on procedurally generate tracks for endless fun."
+      "description": "A hover car racing game featuring a story mode following the ex-racer Adam Reeds and an arcade mode where users can drive on procedurally generated tracks for endless fun."
     }
   }
     
