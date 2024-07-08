@@ -29,8 +29,11 @@ export default function ProjectCarousel({projects, className}: Props) {
           key={index}
           >
             <a href={`#${project.id}`}>
-              <div> {t(`projects.${project.titleKey}`)} </div>
-              {project.imgUrl ? <img className="h-44 object-cover" src={project.imgUrl} alt={`Image of project ${project.titleKey}`}/> : <></>}
+              {project.imgUrl ? <img 
+              className="h-40 object-contain" 
+              src={project.imgUrl} 
+              alt={`Image of project ${t(`projects.${project.titleKey}`)}`}/> 
+              : <h1 className="text-xl text-blue-500 text-center">{t(`projects.${project.titleKey}`)}</h1>}
             </a>
           </CarouselItem>
         ))}
