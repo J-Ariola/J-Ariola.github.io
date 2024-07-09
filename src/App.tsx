@@ -23,6 +23,7 @@ import PoiPoiLogo from "@/assets/img/poipoi.png";
 import BugOffLogo from "@/assets/img/bug-off-logo.png";
 import NeonSkylineLogo from "@/assets/img/neon-skyline-logo-crop.png";
 import BugOffShowcase from "@/assets/img/bug-off-showcase.gif"
+import PoiPoiShowcase from "@/assets/img/poipoi-phone-showcase.png";
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": PoiPoiLogo,
@@ -117,13 +118,10 @@ function App() {
                 altText: "Jest Logo"  
               },
               ] as Array<IconDetails>}
-            showcase={<iframe  
-              src="https://www.youtube.com/embed/u0t2sgT7C98" 
-              title="Neon Skyline (senior project)" 
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen>
-            </iframe>}
+            showcase={<img className="w-48 lg:w-72"
+            src={PoiPoiShowcase}
+            alt="PoiPoi displayed on the phone"
+            />}
             className="bg-fuchsia-950/60"
           />
         </section>
