@@ -34,19 +34,18 @@ export default function ProjectDetails({
         </div>
       </div>
       <div className="flex flex-col items-center gap-y-8 md:grid md:grid-cols-2 md:items-start md:gap-x-4">
-        <div className="flex flex-col gap-y-4">
-        <p className="">{projectDescription}</p>
-        <div className="flex justify-center gap-1 md:flex-wrap md:pb-4">
-          {techIcons ? 
-            techIcons.map( (icon) => {
-              return <Icon
-              iconDetails={icon}
-              className="w-12 sm:w-10 md:w-20 "/>
-            }) : 
-            <></>
-          }
-        </div>
-
+        <div className="flex flex-col gap-y-4 lg:gap-y-8 h-full">
+          <p className="lg:text-2xl text-pretty">{projectDescription}</p>
+          <div className="flex justify-center gap-1 md:flex-wrap md:pb-4 ">
+            {techIcons ? 
+              techIcons.map( (icon) => {
+                return <Icon
+                iconDetails={icon}
+                className="w-12 sm:w-10 md:w-20"/>
+              }) : 
+              <></>
+            }
+          </div>
         </div>
         <div className="pb-4 flex justify-center">
           {secondary ? 
