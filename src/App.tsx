@@ -101,7 +101,7 @@ function App() {
               PrismaIcon,
               JestIcon,
               ] as Array<IconDetails>}
-            showcase={<img className="w-48 lg:w-72"
+            showcase={<img className="w-48 lg:w-56"
             src={PoiPoiShowcase}
             alt="PoiPoi displayed on the phone"
             />}
