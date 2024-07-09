@@ -8,11 +8,12 @@ export default function Icon({
   iconDetails,
   className
 }:Props) {
-  const {imgSrc, altText} = iconDetails;
+  const {imgSrc, altText, title} = iconDetails;
   return (
     <img
     src={imgSrc}
     alt={altText}
+    title={title}
     className={className}
     />
   )

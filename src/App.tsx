@@ -6,23 +6,26 @@ import { IconDetails, Project } from "@/@types/global";
 import LanguageSelector from "@/components/react/LanguageSelector";
 import ProjectDetails from "./components/react/ProjectDetails";
 import ProfilePicture from "@/assets/img/profile-picture.jpg"
-import NextJSLogo from "@/assets/img/badges/next-js.logo.svg";
-import NodeJSLogo from "@/assets/img/badges/node-js.logo.svg";
-import PrismaLogo from "@/assets/img/badges/prisma.logo.svg";
-import FirebaseLogo from "@/assets/img/badges/firebase.logo.svg";
-import JestLogo from "@/assets/img/badges/jest.logo.svg";
-import ProtoMapsLogo from "@/assets/img/badges/protomaps.logo.svg";
-import UnityLogo from "@/assets/img/badges/unity.logo.svg";
-import TypeScriptLogo from "@/assets/img/badges/typescript.logo.svg";
-import ReactLogo from "@/assets/img/badges/react.logo.svg";
-import PostgresqlLogo from "@/assets/img/badges/postgresql.logo.svg";
 import LinkedInLogo from "@/assets/img/badges/linkedin.logo.svg"; 
 import GithubLogo from "@/assets/img/badges/github.logo.svg"; 
+import { 
+  FirebaseIcon,
+  JestIcon, 
+  NextJSIcon,
+  NodeJsIcon, 
+  PostgreSQLIcon, 
+  PrismaIcon, 
+  ProtomapsIcon, 
+  ReactIcon, 
+  TypeScriptIcon, 
+  UnityIcon
+} from "./lib/Icons";
 
 import PoiPoiLogo from "@/assets/img/poipoi.png";
 import BugOffLogo from "@/assets/img/bug-off-logo.png";
 import NeonSkylineLogo from "@/assets/img/neon-skyline-logo-crop.png";
 import BugOffShowcase from "@/assets/img/bug-off-showcase.gif"
+import PoiPoiShowcase from "@/assets/img/poipoi-phone-showcase.png";
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": PoiPoiLogo,
@@ -63,22 +66,22 @@ function App() {
         className="flex ml-auto justify-end flex-wrap"/>
       </header>
       <main className="px-4 pt-8 lg:px-36">
-      <article className="flex flex-col items-center py-2">
+      <article className="flex flex-col items-center py-2 gap-2">
         <img 
         src={ProfilePicture}
         alt="Profile Picture"
         className="w-1/2 md:max-w-[33%] aspect-square rounded-full object-cover"/>
-        <h2>{t("introduction.part_1")}</h2>
+        <h2 className="text-pretty md:text-balance md:text-center">{t("introduction.part_1")}</h2>
       </article>
       <article className="py-2 scroll-mt-28 lg:scroll-mt-14" id="about-me">
         <h2 className="text-3xl font-sans">{t("navigation_menu.about_me")}</h2>
-        <p>{t("about_me.part_1")}</p>
+        <p className="text-pretty">{t("about_me.part_1")}</p>
         <br></br>
-        <p>{t("about_me.part_2")}</p>
+        <p className="text-pretty">{t("about_me.part_2")}</p>
         <br></br>
-        <p>{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
+        <p className="text-pretty">{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
       </article>
-      <article>
+      <article className="pt-8">
         <section className="flex flex-col items-center border-2 border-slate-500 rounded">
           <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
           <ProjectCarousel 
@@ -90,40 +93,19 @@ function App() {
           <ProjectDetails
             projectTitle={t("projects.PoiPoi.title")}
             projectDescription={t("projects.PoiPoi.description")}
+            projectLink="https://poipoi.vercel.app"
             techIcons={[
-              {
-                imgSrc: TypeScriptLogo,
-                altText: "Typescript Logo"
-              },
-              { 
-                imgSrc: NextJSLogo, 
-                altText: "Next JS Logo"
-              }
-              ,
-              {
-                imgSrc : NodeJSLogo,
-                altText:"Node JS Logo"
-              },
-              {
-                imgSrc: ProtoMapsLogo,
-                altText: "Protomaps Logo"
-              },
-              {
-                imgSrc: PrismaLogo,
-                altText: "Prisma Logo"
-              },
-              {
-                imgSrc: JestLogo,
-                altText: "Jest Logo"  
-              },
+              TypeScriptIcon,
+              NextJSIcon,
+              NodeJsIcon,
+              ProtomapsIcon,
+              PrismaIcon,
+              JestIcon,
               ] as Array<IconDetails>}
-            showcase={<iframe  
-              src="https://www.youtube.com/embed/u0t2sgT7C98" 
-              title="Neon Skyline (senior project)" 
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen>
-            </iframe>}
+            showcase={<img className="w-48 lg:w-56"
+            src={PoiPoiShowcase}
+            alt="PoiPoi displayed on the phone"
+            />}
             className="bg-fuchsia-950/60"
           />
         </section>
@@ -132,10 +114,8 @@ function App() {
             className="bg-amber-800"
             projectTitle={t("projects.Bug_Off.title")}
             projectDescription={t("projects.Bug_Off.description")}
-            techIcons={[{
-              imgSrc: UnityLogo,
-              altText: "Unity Logo"
-            }] as Array<IconDetails>}
+            projectLink="https://chinpenguin.itch.io/bug-off-game-off-2021"
+            techIcons={[UnityIcon] as Array<IconDetails>}
             showcase={<img src={BugOffShowcase} alt="Gif of gameplay of Bug-Off"/>}
           />
         </section>
@@ -144,28 +124,13 @@ function App() {
             className="bg-gray-500 border-4 border-blue-400"
             projectTitle={t("projects.My_Video_Game_Collection.title")}
             projectDescription={t("projects.My_Video_Game_Collection.description")}
+            projectLink="https://github.com/J-Ariola/my-video-game-collection"
             techIcons={[
-              {
-                imgSrc: TypeScriptLogo,
-                altText: "Typescript Logo"
-              },
-              { 
-                imgSrc: ReactLogo, 
-                altText: "React Logo"
-              }
-              ,
-              {
-                imgSrc : NodeJSLogo,
-                altText:"Node JS Logo"
-              },
-              {
-                imgSrc: PostgresqlLogo,
-                altText: "PostgreSQL Logo"
-              },
-              {
-                imgSrc: FirebaseLogo,
-                altText: "Firebase Logo"
-              },
+              TypeScriptIcon,
+              ReactIcon,
+              NodeJsIcon,
+              PostgreSQLIcon,
+              FirebaseIcon,
               ] as Array<IconDetails>}
           />
         </section>
@@ -174,11 +139,10 @@ function App() {
           className="bg-fuchsia-950/60"
           projectTitle={t("projects.Neon_Skyline.title")}
           projectDescription={t("projects.Neon_Skyline.description")}
-          techIcons={[{
-            imgSrc: UnityLogo,
-            altText: "Unity Logo"
-          }] as Array<IconDetails>}
-          showcase={<iframe  
+          projectLink="https://github.com/J-Ariola/Neon-Skyline"
+          techIcons={[UnityIcon] as Array<IconDetails>}
+          showcase={<iframe
+            className="w-full aspect-video "
             src="https://www.youtube.com/embed/u0t2sgT7C98" 
             title="Neon Skyline (senior project)" 
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
