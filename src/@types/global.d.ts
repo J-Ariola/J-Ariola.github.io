@@ -7,4 +7,5 @@ export interface Project {
 export interface IconDetails {
   imgSrc: string,
   altText?: string,
+  title?: string,
 }
