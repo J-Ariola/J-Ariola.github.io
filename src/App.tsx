@@ -55,7 +55,7 @@ function App() {
     <div className="max-w-10/12 mt-0 mb-auto ">
       <header className="flex text-center bg-gradient-to-b from-sky-400 to-blue-500 w-full max-w-none sticky top-0 p-2 z-50">
         <div className="flex items-center min-w-20 justify-center">
-          <h1 className="px-4 font-semibold text-lg lg:text-3xl font-sans">{t("header")}</h1>
+          <h1 className=" px-8 font-semibold text-lg lg:text-3xl font-sans text-nowrap">{t("header")}</h1>
         </div>
         <Navigation 
           projects={projects}/>
@@ -82,7 +82,7 @@ function App() {
         <section className="flex flex-col items-center border-2 border-slate-500 rounded">
           <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
           <ProjectCarousel 
-          className="w-full max-w-xs"
+          className="w-2/3 max-w-xs"
           projects={projects}/>
         </section>
         {/* TODO: Each section of the project will be inserted here */}

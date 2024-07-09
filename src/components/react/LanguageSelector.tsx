@@ -1,5 +1,6 @@
 import i18n from '@/i18n';
 import { Button } from '@/components/ui/button';
+import { cn } from "@/lib/utils";
 
 type Language = {
   nativeName: string,
@@ -24,7 +25,7 @@ export default function LanguageSelector({className}:Props):React.JSX.Element {
     <div className={className}>
       {Object.keys(lngs).map( (lng) => (
           <Button variant="link"
-          className={(i18n.resolvedLanguage === lng) ? "underline" : ""}
+          className={cn((i18n.resolvedLanguage === lng) ? "underline" : "", "px-1 md:px-4")}
           key={lng} type="submit" onClick={() => i18n.changeLanguage(lng)}>
             { lngs[lng as keyof Languages].nativeName }
           </Button>

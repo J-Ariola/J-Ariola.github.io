@@ -40,7 +40,7 @@ export default function ProjectDetails({
             techIcons.map( (icon) => {
               return <Icon
               iconDetails={icon}
-              className="w-14 md:w-20"/>
+              className="w-12 sm:w-10 md:w-20"/>
             }) : 
             <></>
           }
