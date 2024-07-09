@@ -6,10 +6,8 @@ import { IconDetails, Project } from "@/@types/global";
 import LanguageSelector from "@/components/react/LanguageSelector";
 import ProjectDetails from "./components/react/ProjectDetails";
 import ProfilePicture from "@/assets/img/profile-picture.jpg"
-
 import LinkedInLogo from "@/assets/img/badges/linkedin.logo.svg"; 
 import GithubLogo from "@/assets/img/badges/github.logo.svg"; 
-
 import { 
   FirebaseIcon,
   JestIcon, 
@@ -21,7 +19,7 @@ import {
   ReactIcon, 
   TypeScriptIcon, 
   UnityIcon
-} from "./lib/badges";
+} from "./lib/Icons";
 
 import PoiPoiLogo from "@/assets/img/poipoi.png";
 import BugOffLogo from "@/assets/img/bug-off-logo.png";
