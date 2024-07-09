@@ -64,22 +64,22 @@ function App() {
         className="flex ml-auto justify-end flex-wrap"/>
       </header>
       <main className="px-4 pt-8 lg:px-36">
-      <article className="flex flex-col items-center py-2">
+      <article className="flex flex-col items-center py-2 gap-2">
         <img 
         src={ProfilePicture}
         alt="Profile Picture"
         className="w-1/2 md:max-w-[33%] aspect-square rounded-full object-cover"/>
-        <h2>{t("introduction.part_1")}</h2>
+        <h2 className="text-pretty md:text-balance md:text-center">{t("introduction.part_1")}</h2>
       </article>
       <article className="py-2 scroll-mt-28 lg:scroll-mt-14" id="about-me">
         <h2 className="text-3xl font-sans">{t("navigation_menu.about_me")}</h2>
-        <p>{t("about_me.part_1")}</p>
+        <p className="text-pretty">{t("about_me.part_1")}</p>
         <br></br>
-        <p>{t("about_me.part_2")}</p>
+        <p className="text-pretty">{t("about_me.part_2")}</p>
         <br></br>
-        <p>{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
+        <p className="text-pretty">{t("about_me.closing")} <a>{t("contact_info.email")}</a></p>
       </article>
-      <article>
+      <article className="pt-8">
         <section className="flex flex-col items-center border-2 border-slate-500 rounded">
           <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
           <ProjectCarousel 
