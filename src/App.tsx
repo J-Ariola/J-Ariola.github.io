@@ -137,7 +137,8 @@ function App() {
           projectTitle={t("projects.Neon_Skyline.title")}
           projectDescription={t("projects.Neon_Skyline.description")}
           techIcons={[UnityIcon] as Array<IconDetails>}
-          showcase={<iframe  
+          showcase={<iframe
+            className="w-full aspect-video "
             src="https://www.youtube.com/embed/u0t2sgT7C98" 
             title="Neon Skyline (senior project)" 
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
