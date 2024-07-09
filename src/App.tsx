@@ -6,18 +6,22 @@ import { IconDetails, Project } from "@/@types/global";
 import LanguageSelector from "@/components/react/LanguageSelector";
 import ProjectDetails from "./components/react/ProjectDetails";
 import ProfilePicture from "@/assets/img/profile-picture.jpg"
-import NextJSLogo from "@/assets/img/badges/next-js.logo.svg";
-import NodeJSLogo from "@/assets/img/badges/node-js.logo.svg";
-import PrismaLogo from "@/assets/img/badges/prisma.logo.svg";
-import FirebaseLogo from "@/assets/img/badges/firebase.logo.svg";
-import JestLogo from "@/assets/img/badges/jest.logo.svg";
-import ProtoMapsLogo from "@/assets/img/badges/protomaps.logo.svg";
-import UnityLogo from "@/assets/img/badges/unity.logo.svg";
-import TypeScriptLogo from "@/assets/img/badges/typescript.logo.svg";
-import ReactLogo from "@/assets/img/badges/react.logo.svg";
-import PostgresqlLogo from "@/assets/img/badges/postgresql.logo.svg";
+
 import LinkedInLogo from "@/assets/img/badges/linkedin.logo.svg"; 
 import GithubLogo from "@/assets/img/badges/github.logo.svg"; 
+
+import { 
+  FirebaseIcon,
+  JestIcon, 
+  NextJSIcon,
+  NodeJsIcon, 
+  PostgreSQLIcon, 
+  PrismaIcon, 
+  ProtomapsIcon, 
+  ReactIcon, 
+  TypeScriptIcon, 
+  UnityIcon
+} from "./lib/badges";
 
 import PoiPoiLogo from "@/assets/img/poipoi.png";
 import BugOffLogo from "@/assets/img/bug-off-logo.png";
@@ -92,31 +96,12 @@ function App() {
             projectTitle={t("projects.PoiPoi.title")}
             projectDescription={t("projects.PoiPoi.description")}
             techIcons={[
-              {
-                imgSrc: TypeScriptLogo,
-                altText: "Typescript Logo"
-              },
-              { 
-                imgSrc: NextJSLogo, 
-                altText: "Next JS Logo"
-              }
-              ,
-              {
-                imgSrc : NodeJSLogo,
-                altText:"Node JS Logo"
-              },
-              {
-                imgSrc: ProtoMapsLogo,
-                altText: "Protomaps Logo"
-              },
-              {
-                imgSrc: PrismaLogo,
-                altText: "Prisma Logo"
-              },
-              {
-                imgSrc: JestLogo,
-                altText: "Jest Logo"  
-              },
+              TypeScriptIcon,
+              NextJSIcon,
+              NodeJsIcon,
+              ProtomapsIcon,
+              PrismaIcon,
+              JestIcon,
               ] as Array<IconDetails>}
             showcase={<img className="w-48 lg:w-72"
             src={PoiPoiShowcase}
@@ -130,10 +115,7 @@ function App() {
             className="bg-amber-800"
             projectTitle={t("projects.Bug_Off.title")}
             projectDescription={t("projects.Bug_Off.description")}
-            techIcons={[{
-              imgSrc: UnityLogo,
-              altText: "Unity Logo"
-            }] as Array<IconDetails>}
+            techIcons={[UnityIcon] as Array<IconDetails>}
             showcase={<img src={BugOffShowcase} alt="Gif of gameplay of Bug-Off"/>}
           />
         </section>
@@ -143,27 +125,11 @@ function App() {
             projectTitle={t("projects.My_Video_Game_Collection.title")}
             projectDescription={t("projects.My_Video_Game_Collection.description")}
             techIcons={[
-              {
-                imgSrc: TypeScriptLogo,
-                altText: "Typescript Logo"
-              },
-              { 
-                imgSrc: ReactLogo, 
-                altText: "React Logo"
-              }
-              ,
-              {
-                imgSrc : NodeJSLogo,
-                altText:"Node JS Logo"
-              },
-              {
-                imgSrc: PostgresqlLogo,
-                altText: "PostgreSQL Logo"
-              },
-              {
-                imgSrc: FirebaseLogo,
-                altText: "Firebase Logo"
-              },
+              TypeScriptIcon,
+              ReactIcon,
+              NodeJsIcon,
+              PostgreSQLIcon,
+              FirebaseIcon,
               ] as Array<IconDetails>}
           />
         </section>
@@ -172,10 +138,7 @@ function App() {
           className="bg-fuchsia-950/60"
           projectTitle={t("projects.Neon_Skyline.title")}
           projectDescription={t("projects.Neon_Skyline.description")}
-          techIcons={[{
-            imgSrc: UnityLogo,
-            altText: "Unity Logo"
-          }] as Array<IconDetails>}
+          techIcons={[UnityIcon] as Array<IconDetails>}
           showcase={<iframe  
             src="https://www.youtube.com/embed/u0t2sgT7C98" 
             title="Neon Skyline (senior project)" 
