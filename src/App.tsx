@@ -93,6 +93,7 @@ function App() {
           <ProjectDetails
             projectTitle={t("projects.PoiPoi.title")}
             projectDescription={t("projects.PoiPoi.description")}
+            projectLink="https://poipoi.vercel.app"
             techIcons={[
               TypeScriptIcon,
               NextJSIcon,
@@ -113,6 +114,7 @@ function App() {
             className="bg-amber-800"
             projectTitle={t("projects.Bug_Off.title")}
             projectDescription={t("projects.Bug_Off.description")}
+            projectLink="https://chinpenguin.itch.io/bug-off-game-off-2021"
             techIcons={[UnityIcon] as Array<IconDetails>}
             showcase={<img src={BugOffShowcase} alt="Gif of gameplay of Bug-Off"/>}
           />
@@ -122,6 +124,7 @@ function App() {
             className="bg-gray-500 border-4 border-blue-400"
             projectTitle={t("projects.My_Video_Game_Collection.title")}
             projectDescription={t("projects.My_Video_Game_Collection.description")}
+            projectLink="https://github.com/J-Ariola/my-video-game-collection"
             techIcons={[
               TypeScriptIcon,
               ReactIcon,
@@ -136,6 +139,7 @@ function App() {
           className="bg-fuchsia-950/60"
           projectTitle={t("projects.Neon_Skyline.title")}
           projectDescription={t("projects.Neon_Skyline.description")}
+          projectLink="https://github.com/J-Ariola/Neon-Skyline"
           techIcons={[UnityIcon] as Array<IconDetails>}
           showcase={<iframe
             className="w-full aspect-video "

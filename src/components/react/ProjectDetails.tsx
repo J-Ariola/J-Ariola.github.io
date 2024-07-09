@@ -7,7 +7,7 @@ import Icon from "./Icon";
 interface Props {
   projectTitle?: string,
   projectDescription?: string,
-  projectLinkOnClick?: () => void,
+  projectLink?: string,
   techIcons?: IconDetails[],
   showcase?: React.ReactNode,
   className?: string,
@@ -16,11 +16,20 @@ interface Props {
 export default function ProjectDetails({
   projectTitle = "Title",
   projectDescription = "Description",
-  projectLinkOnClick = () => alert("External Link Clicked"),
+  projectLink,
   techIcons,
   showcase: secondary,
   className
   }: Props) {
+
+  function handleExternalLinkOnClick() {
+    if (!projectLink) {
+      alert("Sorry, no link at this time");
+      return;
+    }
+    window.location.href = projectLink;
+  }
+
   return (
     <div className={cn(
       "rounded-lg w-full flex flex-col px-8",
@@ -28,7 +37,7 @@ export default function ProjectDetails({
       <div className="flex justify-center py-4 min-w-10">
         <h2 className="text-3xl font-semibold lg:text-4xl text-balance text-center">{projectTitle}</h2>
         <div className="w-0 overflow-visible">
-          <Button asChild className="max-w-max" variant="outline" size="icon" onClick={projectLinkOnClick}>
+          <Button asChild className="max-w-max" variant="outline" size="icon" title={`Link to ${projectLink}`} onClick={handleExternalLinkOnClick}>
             <img className="w-8" src={ExternalLinkIcon} alt="Link to Project" />
           </Button>
         </div>
