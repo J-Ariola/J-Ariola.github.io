@@ -26,6 +26,7 @@ import BugOffLogo from "@/assets/img/bug-off-logo.png";
 import NeonSkylineLogo from "@/assets/img/neon-skyline-logo-crop.png";
 import BugOffShowcase from "@/assets/img/bug-off-showcase.gif"
 import PoiPoiShowcase from "@/assets/img/poipoi-phone-showcase.png";
+import MVGCShowcase from "@/assets/img/my-video-game-collection-showcase.png";
 
 const projectNameImgFileNameLookUp = {
   "PoiPoi": PoiPoiLogo,
@@ -132,6 +133,10 @@ function App() {
               PostgreSQLIcon,
               FirebaseIcon,
               ] as Array<IconDetails>}
+            showcase={<img 
+              className="w-42 lg:w-auto"
+              src={MVGCShowcase} 
+              alt="My Video Game Collection displayed on a laptop"/>}
           />
         </section>
         <section className="py-8 scroll-mt-28 lg:scroll-mt-14" id="Neon_Skyline">
