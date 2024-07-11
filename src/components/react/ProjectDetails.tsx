@@ -35,7 +35,7 @@ export default function ProjectDetails({
       "rounded-lg w-full flex flex-col px-8",
       className)}>
       <div className="flex justify-center py-4 min-w-10">
-        <h2 className="text-3xl font-semibold lg:text-4xl text-balance text-center">{projectTitle}</h2>
+        <h2 className="text-3xl font-semibold lg:text-4xl text-balance text-center mr-4">{projectTitle}</h2>
         <div className="w-0 overflow-visible">
           <Button asChild className="max-w-max" variant="outline" size="icon" title={`Link to ${projectLink}`} onClick={handleExternalLinkOnClick}>
             <img className="w-8" src={ExternalLinkIcon} alt="Link to Project" />
