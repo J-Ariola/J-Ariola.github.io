@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="max-w-10/12 mt-0 mb-auto ">
-      <header className="flex text-center bg-gradient-to-b from-sky-400 to-blue-500 w-full max-w-none sticky top-0 p-2 z-50">
+      <header className="flex text-center bg-gradient-to-b from-sky-400 to-blue-500 rounded-b-md w-full max-w-none sticky top-0 p-2 z-50">
         <div className="flex items-center min-w-20 justify-center">
           <h1 className=" px-8 font-semibold text-lg lg:text-3xl font-sans text-nowrap">{t("header")}</h1>
         </div>
@@ -159,7 +159,7 @@ function App() {
       </article>
       </main>
       <footer className="pt-4 flex">
-        <div className="p-4 w-full bg-blue-500 rounded-t-lg flex items-center justify-around">
+        <div className="p-4 w-full bg-blue-500 rounded-t-md flex items-center justify-around">
           <h3 className="text-2xl">
             {"Contact Me"}
           </h3>
