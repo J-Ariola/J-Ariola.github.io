@@ -161,7 +161,7 @@ function App() {
       <footer className="pt-4 flex">
         <div className="p-4 w-full bg-blue-500 rounded-t-md flex items-center justify-around">
           <h3 className="text-2xl">
-            {"Contact Me"}
+            {t("contact_me")}
           </h3>
           <div className="flex gap-2">
             <a 
