@@ -24,6 +24,7 @@ import {
 import PoiPoiLogo from "@/assets/img/poipoi.png";
 import BugOffLogo from "@/assets/img/bug-off-logo.png";
 import NeonSkylineLogo from "@/assets/img/neon-skyline-logo-crop.png";
+import MVGCLogo from "@/assets/img/MVGC_Banner.png"
 import BugOffShowcase from "@/assets/img/bug-off-showcase.gif"
 import PoiPoiShowcase from "@/assets/img/poipoi-phone-showcase.png";
 import MVGCShowcase from "@/assets/img/my-video-game-collection-showcase.png";
@@ -32,6 +33,7 @@ const projectNameImgFileNameLookUp = {
   "PoiPoi": PoiPoiLogo,
   "Bug_Off": BugOffLogo,
   "Neon_Skyline": NeonSkylineLogo,
+  "My_Video_Game_Collection": MVGCLogo,
 }
 
 function App() {
@@ -86,10 +88,9 @@ function App() {
         <section className="flex flex-col items-center border-2 border-slate-500 rounded">
           <h2 className="text-3xl font-sans">{t("navigation_menu.projects")}</h2>
           <ProjectCarousel 
-          className="w-2/3 max-w-xs"
+          className="w-2/3 max-w-sm"
           projects={projects}/>
         </section>
-        {/* TODO: Each section of the project will be inserted here */}
         <section className="pt-4 py-8 scroll-mt-28 lg:scroll-mt-14" id="PoiPoi">
           <ProjectDetails
             projectTitle={t("projects.PoiPoi.title")}
@@ -161,7 +162,7 @@ function App() {
       <footer className="pt-4 flex">
         <div className="p-4 w-full bg-blue-500 rounded-t-md flex items-center justify-around">
           <h3 className="text-2xl">
-            {"Contact Me"}
+            {t("contact_me")}
           </h3>
           <div className="flex gap-2">
             <a 
